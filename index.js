@@ -16,14 +16,14 @@ app.use(express.json({ limit: '1mb' }));
 const allData = [];
 app.post('/api',(req,res)=>{
     const {id,name,content} =req.body
-    const png = jdenticon.toPng(name, 200);
+    const png = jdenticon.toPng(name, 40);
     const b64 = new Buffer(png).toString('base64');
     allData.push({
         id:id,
         img:b64,
         content:content,
     })
-    // console.log(allData)
+    res.send("ok");
 })
 
 app.get('/api',(req,res)=>{
