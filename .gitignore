@@ -1,2 +1,6 @@
 node_modules
 dist
+dist
+dist-ssr
+dist/index.html
+dist/assets/index-de789ee8.js
