@@ -22,6 +22,7 @@ app.post('/api',(req,res)=>{
         id:id,
         img:b64,
         content:content,
+        timeStamp:Date()
     })
     res.send("ok");
 })
